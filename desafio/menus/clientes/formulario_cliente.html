@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joogle Forms</title>
+</head>
+<body>
+<h3>Cadastro de Usuário</h3>
+
+<form action="">
+    <div>
+        <label for="nome">Nome: </label>    
+        <input type="text" name="name">
+    </div>
+    <br>
+
+    <div>
+        <label for="email">Email: </label>    
+        <input type="email" name="email">
+    </div>
+    <br>
+
+    <div>
+        <label for="idade">Idade: </label>    
+        <input type="number" name="idade">
+    </div>
+    <br>
+
+    <div>
+        <label for="sexo">Sexo:</label>
+        <br>
+      <input type="radio" name="sexo" value="masculino" checked>Masculino</input>
+      <input type="radio" name="sexo" value="feminino" checked>Feminino</input>
+    </div>
+    <br>
+    
+
+    <div>
+        <label for="estado_civil">Estado Civil:</label>
+        <select name="estado_civil" id = ""> 
+            <option value="1">Solteiro (a)</option>
+            <option value="2">Casado (a)</option>
+        </select>
+    </div>
+    <br>
+    
+    
+    <div>
+        <label for = "profissao">Profissão:</label>
+        <select name="profissao" id = "">
+            <option value="1">Programador</option>
+            <option value="2">Analista</option>
+            <option value="3">Designer</option>
+        </select>
+
+    </div>
+    <br>
+
+    <div>
+        <input type="checkbox">
+        <label for = "aceite_dados">Aceito que meus dados sejam coletados, usados, compartilhados, vendidos, distorcidos, reaproveitados e descartados para benefício na empresa</label>
+        <br>
+        
+        <input type="checkbox">
+        <label for = "newsletter">Quero encher minha caixa de entrada com Spam</label>
+    </div>
+    <br>
+    
+    <div>
+        <label for = "observacao">Alguma observação?</label>
+        <br>
+        <textarea cols="40" rows="4">Escreva sua observação</textarea>
+
+
+    </div>
+
+    <button>Submita seus dados</button>
+
+</form>
+
+
+</body>
+</html>
