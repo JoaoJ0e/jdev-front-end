@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="./cliente-style.css" rel="stylesheet">
+
+    <title>Joogle Forms</title>
+</head>
+<body>
+<h3 class = "main-header">Cadastro de Usuário</h3>
+
+<form action="">
+    <div>
+        <label for="nome">Nome: </label>    
+        <input type="text" name="name">
+    </div>
+    <br>
+
+    <div>
+        <label for="email">Email: </label>    
+        <input type="email" name="email">
+    </div>
+    <br>
+
+    <div>
+        <label for="idade">Idade: </label>    
+        <input type="number" name="idade">
+    </div>
+    <br>
+
+    <div>
+        <label for="sexo">Sexo:</label>
+        <br>
+      <input type="radio" name="sexo" value="masculino" checked>Masculino</input>
+      <input type="radio" name="sexo" value="feminino" checked>Feminino</input>
+    </div>
+    <br>
+    
+
+    <div>
+        <label for="estado_civil">Estado Civil:</label>
+        <select name="estado_civil" id = ""> 
+            <option value="1">Solteiro (a)</option>
+            <option value="2">Casado (a)</option>
+        </select>
+    </div>
+    <br>
+    
+    
+    <div>
+        <label for = "profissao">Profissão:</label>
+        <select name="profissao" id = "">
+            <option value="1">Programador</option>
+            <option value="2">Analista</option>
+            <option value="3">Designer</option>
+        </select>
+
+    </div>
+    <br>
+
+    <div>
+        <input type="checkbox">
+        <label for = "aceite_dados">Aceito que meus dados sejam coletados, usados, compartilhados, vendidos, distorcidos, reaproveitados e descartados para benefício na empresa</label>
+        <br>
+        
+        <input type="checkbox">
+        <label for = "newsletter">Quero encher minha caixa de entrada com Spam</label>
+    </div>
+    <br>
+    
+    <div>
+        <label for = "observacao">Alguma observação?</label>
+        <br>
+        <textarea cols="40" rows="4">Escreva sua observação</textarea>
+
+
+    </div>
+
+    <button>Submita seus dados</button>
+
+    <a href="../menu.html">Menu</a>
+
+</form>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+</body>
+</html>

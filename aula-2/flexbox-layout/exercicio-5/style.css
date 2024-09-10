@@ -1,0 +1,48 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    background-color: black;
+    height: 12%;  
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(to bottom right, rgb(44, 44, 44), rgb(161, 21, 21) );
+    width: 15%;
+    gap: 15px;
+    padding-top: 15px;
+}
+
+.link {
+    display: flex;
+    background-color: brown;
+    justify-content: center;
+    align-items: center;
+    color: whitesmoke;
+    height: 50px;
+    width: 100%;
+
+    margin-left: 20px;
+}
+
+div a {
+    height: auto;
+}

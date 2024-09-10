@@ -1,9 +1,15 @@
+body {
+    margin-left: 1.5%;
+}
 
 .main-header {
     background-color: #ed3237;
     color: #fefefe;
+
     border: 5px solid #fefefe ;
     border-radius: 30px;
+    margin-left: 0px;
+
     text-align: center;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 
@@ -12,10 +18,6 @@
     background-repeat: no-repeat;
 }
 
-.red-header {
-    color: #ed3237;
-}
-
-.centered {
-    text-align: center;
+a {
+    color: #ad2227;
 }

@@ -1,0 +1,52 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 0.2fr 1fr;
+    grid-template-rows: 0.15fr 1fr;
+    grid-template-areas: 
+    "div1 div1" 
+    "div2 div3";
+    height: 100%;
+}
+
+.div-1 {
+    grid-area: div1;
+    background-color: #26B170;
+}
+
+.div-1-1 {
+    display: inline;
+    padding: 0.5%;
+    width: calc(100%-50px);
+
+}
+
+.div-2 {
+    grid-area: div2;
+    background-color: #01377d;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+.div-3 {
+    grid-area: div3;
+}
+
+a {
+    color:rgb(255, 255, 255)
+}
+
+.main-p {
+    padding: 3%;
+}
+
+.logo-trier {
+    width: 5%;
+    height: auto;
+}

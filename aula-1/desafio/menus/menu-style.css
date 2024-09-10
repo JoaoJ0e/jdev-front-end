@@ -1,0 +1,25 @@
+
+.main-header {
+    background-color: #ed3237;
+    color: #fefefe;
+    border: 5px solid #fefefe ;
+    border-radius: 30px;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+    background-image: url('https://images.seeklogo.com/logo-png/53/2/hot-wheels-treasure-hunt-logo-png_seeklogo-532806.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.red-header {
+    color: #ed3237;
+}
+
+.centered {
+    text-align: center;
+}
+
+a {
+    color: #ad2227;
+}
