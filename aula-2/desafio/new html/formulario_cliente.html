@@ -44,45 +44,59 @@
             <div class="main-content">
                 <div class="main">
 
-                    <h1>Cadastro de Produtos</h1>
+                    <h1>Cadastro de Clientes</h1>
 
                     <div class="row">
 
-                        <div class="col-sm-12 col-md-6">
+                        <div class="col-sm-6 col-md-4">
                             <input type="text" class="form-control" placeholder="Nome"
                             aria-label="nome" aria-describedby="basic-addon-1">
                         </div>
 
-                        <div class="col-sm-12 col-md-6">
-                            <input type="text" class="form-control" placeholder="Descrição"
+                        <div class="col-sm-6 col-md-4">
+                            <input type="text" class="form-control" placeholder="E-mail"
                             aria-label="descricao" aria-describedby="basic-addon-1">
                         </div>
-
+                        
                     </div>
                     <div class="row">
-
-                        <div class="col-sm-12 col-md-4">
-                            <input type="text" class="form-control" placeholder="Código"
+                        <div class="col-sm-4 col-md-3">
+                            <input type="number" class="form-control" placeholder="Idade"
+                            aria-label="descricao" aria-describedby="basic-addon-1">
+                        </div>
+                        <div class="col-sm-4 col-md-2">
+                            <input type="text" class="form-control" placeholder="Sexo"
                             aria-label="codigo" aria-describedby="basic-addon-1">
                         </div>
-
-                        <div class="col-sm-12 col-md-4">
-                            <input type="text" class="form-control" placeholder="Preço"
-                            aria-label="preco" aria-describedby="basic-addon-1">
-                        </div>
-
-                        <div class="col-sm-12 col-md-4">
-                            <select class="form-select" name="categoria" id = "">
-                                <option value="1">Industrial</option>
-                                <option value="2">Natureba</option>
+                        <div class="col-sm-12 col-md-3">
+                            <select class="form-select" name="estado_civil" id = "" placeholder="estado_civil">
+                                <option value="1">Solteiro</option>
+                                <option value="2">Casado</option>
                                 <option value="3">Outros</option>
                             </select>
                         </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-12 col-md-2">
+                            <select class="form-select" name="profissao" id = "">
+                                <option value="1">TI</option>
+                                <option value="2">RH</option>
+                                <option value="3">Suporte</option>
+                                <option value="4">Estagiário</option>
+                                <option value="5">Marketing</option>
+                            </select>
+                        </div>
+
+                        <div class="col-sm-12 col-md-6">
+                            <input type="text" class="form-control" placeholder="Observação"
+                            aria-label="observacao" aria-describedby="basic-addon-1">
+                        </div>
 
                     </div>
                     <div class="row">
                         <div class="col-sm-12 col-md-4">
-                            <button>Cadastrar produto</button>
+                            <button type="button" class="btn btn-danger">Cadastrar cliente</button>
                         </div>
                     </div>
             </div>
