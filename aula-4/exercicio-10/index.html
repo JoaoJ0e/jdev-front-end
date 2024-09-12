@@ -10,46 +10,41 @@
     <title>Document</title>
 </head>
 <body>
-    <section class="main-container">
-        <div class="header">
-            <i class="fa fa-anchor"></i>
-            <h1>To-Do-Blue</h1>
-            <i class="fa fa-anchor"></i>
-        </div>
+    <div class="header">
+        <i class="fa fa-anchor"></i>
+        <h1>To-Do Blue</h1>
+        <i class="fa fa-anchor"></i>
+    </div>
 
-        <div class="main-content">
-            
-            <div class="topbar">
-                <div class="menuitem">
-                    <form onsubmit="addTarefa(event)">
-                        <i class="fa fa-plus"></i>
-                        <label>Adicionar Tarefa </label>
-                        <input type="text" class="addTarefaField" placeholder="Escreva a tarefa aqui!" id = addTarefaField>
-                        <button type="submit" style="width: 50px;" class="addTarefaButton" id = "addTarefaButton">Add</button>
-                    </form>
-                </div>
-                <div class="menuitem">
-                    <i class="fa fa-list"></i>
-                    <label>Rastreador de Tarefas -></label>
-                </div>
-                <div class="menuitem">
-                    <label>Pendentes: </label>
-                    <label id="qtdPendentes">0</label>
-                    <label> - Concluídas: </label>
-                    <label id="qtdPendentes">0</label>
-                </div>
+    <div class="main-content">
+        
+        <div class="topbar">
+            <div class="menuitem">
+                <form onsubmit="addTarefa(event)">
+                    <label>Adicionar Tarefa </label>
+                    <input type="text" class="addTarefaField" placeholder="Escreva a tarefa aqui!" id = addTarefaField>
+                    <button type="submit" style="width: 50px;" class="addTarefaButton" id = "addTarefaButton"><i class="fa fa-plus"></i></button>
+                </form>
+                <button style="width: 50px;" class="addTarefaButton" id = "limpaTarefasButton"
+                onclick="deletaTarefasConcluidas(event)"><i class="fa fa-calendar-check"></i></button>
             </div>
-            
-            <!-- TODO: fazer UL -->
-            <div class="content" id="content">
-                <ul class="lista-tarefas" id="lista-tarefas">
-                    <p class="noTarefaText" id="noTarefaText">Aqui é onde suas tarefas ficarão! <br>Para criar uma, digite ela no campo acima e clique em "Add" ;)</p>
-                    
-                </ul>
+            <div class="menuitem">
+                <i class="fa fa-list"></i>
+                <label>Pendentes: </label>
+                <label id="qtdPendentes">0</label>
+                <label>Concluídas: </label>
+                <label id="qtdConcluidas">0</label>
             </div>
         </div>
         
-    </section>    
+        <div class="content" id="content">
+            <ul class="lista-tarefas" id="lista-tarefas">
+                <p class="noTarefaText" id="noTarefaText">Aqui é onde suas tarefas ficarão! <br>Para criar uma, digite ela no campo acima e clique em "Add" ;)</p>
+                
+            </ul>
+        </div>
+    </div>
+        
     
     
     

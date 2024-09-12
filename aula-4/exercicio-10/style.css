@@ -7,8 +7,8 @@
 
 body {
     display: flex;
-    flex-direction: column;
-    
+    flex-direction: column;    
+    height: 92vh;
 }
 
 .header {
@@ -20,6 +20,7 @@ body {
     width: 100%;
     height: 11%;
     box-shadow: inset 0px 0px 20px 1px rgba(255, 255, 255, 0.342);
+
     
 }
 
@@ -43,7 +44,8 @@ body {
     color: #242649;
     width: 100%;
     height: auto;
-    box-shadow: inset 0px 10px 20px 1px rgba(0, 0, 0, 0.459);
+    background: linear-gradient(135deg, #b8cced, #b2d4eb);
+
 }
 
 .menuitem {
@@ -54,21 +56,43 @@ body {
     width: auto;
 }
 
+.menuitem label {
+    padding: 5px;
+}
+
 
 .content {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     align-content: center;
-    box-shadow: inset 0px -5px 30px 5px rgba(63, 117, 138, 0.459);
+    background: linear-gradient(135deg, #bbd8ee88, #ffffff);
+    height: 0.5fr;
 }
 
 .tarefa {
     display: flex;
     flex-direction: row;
-    width: 100%;
+    width: auto;
     height: 50px;
     padding: 10px;
+    margin: 10px;
+    background-color: #b2d4eb;
+    color: #FFFFFF;
+    border-radius: 15px;
+    
+}
+
+.tarefa-desc {
+    display: flex;
+    flex-wrap: wrap;
+    width: auto;
+    height: 5%;
+}
+
+.tarefa-buttons {
+    display: flex;
+    align-items: end;
 }
 
 .tarefa p {
@@ -78,10 +102,20 @@ body {
 .tarefa button {
     margin: 5px;
     padding: 5px;
+    border-radius: 30px;
+    background-color: #242649;
+    color: #e4f4ff;
+    border: none;
+}
+
+.tarefa-completa {
+    color: green;
+    text-decoration: line-through;
 }
 
 .addTarefaField {
     border-radius: 20px;
+    border: none;
     box-shadow: 0px 0px 5px 5px rgba(255, 255, 255, 0.342);
     padding-top: 10px;
     padding-bottom: 10px;
@@ -91,11 +125,23 @@ body {
 
 .addTarefaButton {
     border-radius: 20px;
+    border: none;
+    box-shadow: inset 0px 0px 5px 5px rgba(181, 208, 255, 0.366);
     padding: 10px;
+
 }
 
 .noTarefaText {
     margin: 20%;
+    color: #e7fcff;
+    background-color: #242649;
+    border-radius: 25px;
+    height: auto;
+    padding: 20px;
 }
-/* Usar depois na lista de tarefas */
-/* overflow: scroll; */
+
+.lista-tarefas {
+    height: 0.9fr;
+    width: 0.7fr;
+    overflow: scroll;
+}
