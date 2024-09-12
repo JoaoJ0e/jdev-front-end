@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body  style="display: flex; flex-direction: column; align-content: center; justify-content: center;"
+    onkeydown="logKeyDown(event)"
+    onkeyup="logKeyUp()"
+    onkeypress="logKeyPress()">
+
+    <!-- onclick="alertaUsuarios()"> -->
+    <div style="height: 200px; width: 200px; border: 1px solid black;;"
+    ondblclick="alertaDbClick()"
+    onmouseover="logOnMouseOver()"
+    onmouseout="logOnMouseOut()"
+    onmousedown="logOnMouseDown()"
+    onmouseup="logOnMouseUp()"
+    >
+    EVENTOS DO MOUSE
+    
+    </div>
+
+    <div style="height: 200px; width: 200px; border: 1px solid black;"
+    >
+    EVENTOS DO TECLADO (estão no body)
+    
+    </div>
+
+    <form onsubmit="logSubmit(event)">
+        <input type="text"
+        onchange="logChange()"
+        onfocus="logFocus()"
+        onblur="logBlur()">
+        
+        <button type="submit">Submit</button>
+    </form>
+
+        
+
+    <script src="script.js"></script>
+</body>
+</html>
