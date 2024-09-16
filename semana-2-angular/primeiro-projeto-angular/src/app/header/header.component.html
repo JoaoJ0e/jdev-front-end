@@ -1,0 +1,13 @@
+<div class="header">
+  <div class="title">
+    <h1>The Anglerfish</h1>
+    <h1>-</h1>
+    <h1>{{ titulo }}</h1>
+  </div>
+
+  <div class="searchbox">
+    <input [(ngModel)]="pesquisa" (blur)="emiteValor()" type="text" placeholder="Search the seven seas ⛵">
+    <button (click)="emiteValor()">🔍</button>
+  </div>
+
+</div>

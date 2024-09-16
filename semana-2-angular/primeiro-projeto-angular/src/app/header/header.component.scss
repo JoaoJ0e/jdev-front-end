@@ -1,0 +1,27 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: antiquewhite;
+
+  width: 100%;
+  height: 100px;
+  background-color: rgb(56, 48, 48);
+}
+
+.searchbox input, button{
+  padding: 0.75rem;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0px 0px 50px rgb(255, 235, 180);
+  background-color: rgba(255, 235, 180, 0.747);
+}
+
+
+
+.title {
+  display: flex;
+  align-content: center;
+}

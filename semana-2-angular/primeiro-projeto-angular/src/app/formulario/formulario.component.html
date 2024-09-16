@@ -1,0 +1,19 @@
+<div class="formulario">
+  <h3>Formulario</h3>
+  <div>
+    <label for="nome">Nome </label>
+    <input [(ngModel)]="nome" type="text" id="nome">
+    {{nome}}
+  </div>
+  <div>
+    <label for="email">E-mail </label>
+    <input [(ngModel)]="email" type="email" id="email">
+    {{email}}
+  </div>
+  <div>
+    <label for="fone">Fone </label>
+    <input  [(ngModel)]="fone" type="text" id="fone">
+    {{fone}}
+  </div>
+  <button (click)="sendAlert()">MANDA</button>
+</div>
