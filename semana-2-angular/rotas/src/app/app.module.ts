@@ -8,6 +8,7 @@ import { ListagemClientesComponent } from './listagem-clientes/listagem-clientes
 import { HeaderComponent } from './header/header.component';
 import { ContentComponent } from './content/content.component';
 import { FormsModule } from '@angular/forms';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { FormsModule } from '@angular/forms';
     FormularioComponent,
     ListagemClientesComponent,
     HeaderComponent,
-    ContentComponent
+    ContentComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,

@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { Client } from '../models/client';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-formulario',
@@ -14,9 +15,16 @@ export class FormularioComponent {
   nome='';
   email='';
   cpf='';
-
   contador = 1;
 
+  constructor(private route: ActivatedRoute) {
+    console.log(route);
+    this.route.params.subscribe(valores => {
+      console.log(valores);
+      const id = valores['id'];
+      }
+    )
+  };
 
   enviaCliente() {
     const cliente = {

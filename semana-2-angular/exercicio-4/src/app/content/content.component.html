@@ -1,3 +1,12 @@
-<div class="content">
-  <app-formulario></app-formulario>
+<div class="container">
+  <div class="menu">
+    <!-- <a routerLink="form">Formulário</a>
+    <a routerLink="list">Lista</a>
+    <router-outlet></router-outlet> -->
+  </div>
+
+  <div class="content">
+    <app-formulario (enviaDados)="addCliente($event)"></app-formulario>
+    <app-listagem-clientes (requestEdit)="editaCliente($event)" (requestDelete)="deleteCliente($event)" [clientes]="clientes" class="lista"></app-listagem-clientes>
+  </div>
 </div>
