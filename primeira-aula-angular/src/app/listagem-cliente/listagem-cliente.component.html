@@ -1,0 +1,23 @@
+<table border>
+  <tr>
+    <th>
+      id
+    </th>
+    <th>
+      Nome
+    </th>
+    <th>
+      Idade
+    </th>
+    <th>
+      Acoes
+    </th>
+  </tr>
+  <tr *ngFor="let client of clients">
+    <td>{{ client.id }}</td>
+    <td>{{ client.name }}</td>
+    <td>{{ client.age }}</td>
+    <td><button (click)="editClient(client)">Editar</button></td>
+    <td><button (click)="removeClient(client?.id)">Remover</button></td>
+  </tr>
+</table>

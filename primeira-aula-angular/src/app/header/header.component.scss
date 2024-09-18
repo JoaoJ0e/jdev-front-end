@@ -1,0 +1,46 @@
+header {
+  background-color: tomato;
+  height: 50px;
+  padding: 5px;
+  color: white;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 100%;
+}
+
+header nav li {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+header a {
+  text-decoration: none;
+  color: white;
+}
+
+header nav li a:hover {
+  color: rgb(255, 208, 151);
+  cursor: pointer;
+}
+
+header nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+header nav h1 {
+  margin-right: 10px;
+}
+
+.active {
+  color: rgb(255, 208, 151) !important;
+  text-decoration: underline !important;
+}

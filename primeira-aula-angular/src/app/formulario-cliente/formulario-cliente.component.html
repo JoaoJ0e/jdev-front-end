@@ -1,0 +1,13 @@
+<form (submit)="cadastrarCliente()">
+  <div>
+    <label for="name">Nome: </label>
+    <input type="text" name="name" [(ngModel)]="name">
+  </div>
+  <div>
+    <label for="age">Idade: </label>
+    <input type="number" name="age" [(ngModel)]="age">
+  </div>
+  <div>
+    <button type="submit">Cadastrar</button>
+  </div>
+</form>
