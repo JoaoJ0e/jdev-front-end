@@ -1,0 +1,18 @@
+.notfound {
+  display: flex;
+  flex-direction: column;
+
+  padding: 30px;
+  margin: 10%;
+
+  border-radius: 20px;
+  background: linear-gradient(10deg, rgb(66, 15, 15), rgb(116, 38, 38));
+}
+
+.notfound h1 {
+  font-size: 3.5rem;
+}
+
+.notfound p {
+  font-size: 1rem;
+}
