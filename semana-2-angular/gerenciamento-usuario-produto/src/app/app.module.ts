@@ -5,21 +5,21 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProdutoModule } from './main/produto/produto.module';
 import { UsuarioModule } from './main/usuario/usuario.module';
-import { CadastroModule } from "./main/produto/features/cadastro/cadastro.module";
 import { HeaderComponent } from './header/header.component';
+import { ContentComponent } from './content/content.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent
+    HeaderComponent,
+    ContentComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ProdutoModule,
-    UsuarioModule,
-    CadastroModule
-],
+    UsuarioModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })

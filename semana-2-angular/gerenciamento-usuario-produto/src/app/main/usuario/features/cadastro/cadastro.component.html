@@ -1,1 +1,13 @@
-<p>usuario cadastro works!</p>
+<form (submit)="cadastrarUsuario()">
+  <div>
+    <label for="nome">Nome: </label>
+    <input type="text" name="nome" [(ngModel)]="nome">
+  </div>
+  <div>
+    <label for="idade">Idade: </label>
+    <input type="number" name="idade" [(ngModel)]="idade">
+  </div>
+  <div>
+    <button type="submit">Cadastrar</button>
+  </div>
+</form>

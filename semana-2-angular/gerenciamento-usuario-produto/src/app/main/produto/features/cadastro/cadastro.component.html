@@ -1,1 +1,13 @@
-<p>produto cadastro works!</p>
+<form (submit)="cadastrarProduto()">
+  <div>
+    <label for="nome">Nome: </label>
+    <input type="text" name="nome" [(ngModel)]="nome">
+  </div>
+  <div>
+    <label for="preco">Preço: </label>
+    <input type="number" name="preco" [(ngModel)]="preco">
+  </div>
+  <div>
+    <button type="submit">Cadastrar</button>
+  </div>
+</form>

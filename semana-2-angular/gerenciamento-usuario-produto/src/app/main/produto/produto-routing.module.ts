@@ -7,6 +7,7 @@ const routes: Routes = [
   { path: '', component: ListagemComponent},
   { path: 'listagem', component: ListagemComponent},
   { path: 'cadastro', component: CadastroComponent},
+  { path: 'cadastro/:id', component: CadastroComponent},
 ];
 
 @NgModule({
