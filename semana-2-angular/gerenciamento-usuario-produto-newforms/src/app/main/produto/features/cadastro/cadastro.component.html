@@ -1,0 +1,15 @@
+<form [formGroup]="form" (submit)="cadastraProduto()"  >
+  <div>
+    <label>AAA</label>
+    <input type="text" name="nome" placeholder="nome" formControlName="nome">
+  </div>
+  <div>
+    <input type="number" name="preco" placeholder="preco" formControlName="preco">
+  </div>
+  <div>
+    <input type="number" name="estoque" placeholder="estoque" formControlName="estoque">
+  </div>
+  <div>
+    <button type="submit">Cadastrar</button>
+  </div>
+</form>
