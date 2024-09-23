@@ -1,1 +1,6 @@
-<p>listagem works!</p>
+<section class="foto-grid">
+    <div class="foto-card" *ngFor="let foto of fotos">
+        <img [src]="foto.thumbnailUrl"/>
+        <p> {{ foto.title }} </p>
+    </div>
+</section>

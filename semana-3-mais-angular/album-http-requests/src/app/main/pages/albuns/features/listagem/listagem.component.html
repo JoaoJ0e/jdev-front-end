@@ -1,0 +1,6 @@
+<section class="album-grid">
+    <div (click)="verFotos(album.id)" class="album-card" *ngFor:="let album of albuns">
+        <p>{{ album.id }}</p>
+        <p>{{ album.title }}</p>
+    </div>
+</section>

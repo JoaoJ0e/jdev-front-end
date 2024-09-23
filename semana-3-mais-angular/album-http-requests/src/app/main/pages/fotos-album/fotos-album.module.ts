@@ -9,7 +9,7 @@ import { ListagemComponent } from './features/listagem/listagem.component';
   ],
   imports: [
     CommonModule,
-    FotosAlbumRouterModule
+    FotosAlbumRouterModule,
   ]
 })
 export class FotosAlbumModule { }
