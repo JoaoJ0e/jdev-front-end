@@ -28,8 +28,21 @@ export class CadastroComponent implements OnInit{
   }
 
   ngOnInit(): void {
+    this.produtoService.buscarUsuarios().subscribe((usuarios) => {
+      console.log('usuarios', usuarios)
+    })
+
     this.buildForm();
   }
+
+  deletaPost(id: number) {
+    this;this.produtoService.deletarPost(id).subscribe(() => {
+      this.produtoService.buscarPosts().subscribe((posts) => {
+        this.posts = posts;
+      })
+    })
+  }
+
 
   buildForm() {
     this.form = this.formBuilder.group({

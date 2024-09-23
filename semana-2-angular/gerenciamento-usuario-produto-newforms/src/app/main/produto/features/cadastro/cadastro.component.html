@@ -1,15 +1,22 @@
 <form [formGroup]="form" (submit)="cadastraProduto()"  >
   <div>
-    <label>AAA</label>
+    <label>Nome: </label>
     <input type="text" name="nome" placeholder="nome" formControlName="nome">
   </div>
   <div>
+    <label>Preço: </label>
     <input type="number" name="preco" placeholder="preco" formControlName="preco">
   </div>
   <div>
+    <label>Estoque: </label>
     <input type="number" name="estoque" placeholder="estoque" formControlName="estoque">
   </div>
   <div>
     <button type="submit">Cadastrar</button>
   </div>
 </form>
+
+<div *ngFor="let usuario of usuarios">
+  <label>{{ usuario.id }}</label>
+
+</div>

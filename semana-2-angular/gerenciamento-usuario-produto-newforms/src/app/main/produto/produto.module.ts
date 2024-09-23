@@ -6,6 +6,7 @@ import { ListagemModule } from './features/listagem/listagem.module';
 import { RouterModule } from '@angular/router';
 import { ProdutoRoutingModule } from './produto-routing.module';
 import { ProdutoService } from './services/produto.service';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -18,7 +19,8 @@ import { ProdutoService } from './services/produto.service';
     RouterModule,
     ProdutoRoutingModule,
     CadastroModule,
-    ListagemModule
+    ListagemModule,
+    HttpClientModule
   ],
 })
 export class ProdutoModule { }

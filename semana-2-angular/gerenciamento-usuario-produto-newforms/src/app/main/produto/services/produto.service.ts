@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Produto } from '../../../models/produto';
+import { HttpClient } from '@angular/common/http';
+import { take } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -8,7 +10,25 @@ export class ProdutoService {
   private id = 0;
   private produtos: Array<Produto> = [];
 
-  constructor() {}
+  constructor(
+    private http: HttpClient
+  ) {}
+
+  buscarUsuarios() {
+    return this.http.get('https://jsonplaceholder.typicode.com/users')
+  }
+
+  buscarPosts() {
+    return this.http.get('https://jsonplaceholder.typicode.com/posts')
+  }
+
+  deletarPost(id: number) {
+    return this.http.delete(`https://jsonplaceholder.typicode.com/users/${id}`)
+  }
+
+  cadastrarPost(id: number) {
+    return this.http.post(`https://jsonplaceholder.typicode.com/posts`, {title: 'Meu Post', body: 'askdoasdfs'}).pipe(take(1))
+  }
 
   addProduto(produto: Produto) {
     produto.id = this.id;
