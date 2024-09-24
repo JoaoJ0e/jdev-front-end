@@ -1,0 +1,36 @@
+body {
+  display: grid;
+  grid-template-columns: 17% 1fr;
+  grid-template-rows: 15% 1fr;
+  grid-template-areas:
+  "header header"
+  "navbar content";
+}
+
+app-header{
+  grid-area: header;
+
+  width: 100%;
+  height: fit-content;
+  padding: 0.5rem;
+  background-color: white;
+}
+
+app-navbar {
+  grid-area: navbar;
+  width: 100%;
+  height: 89.8vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background-color: tomato;
+}
+
+app-content {
+  grid-area: content;
+  width: 100%;
+  height: 100%;
+  background-color: grey;
+}
