@@ -8,6 +8,7 @@ import { ListagemModule } from './features/listagem/listagem.module';
 import { CadastroModule } from './features/cadastro/cadastro.module';
 import { AppRoutingModule } from '../../app-routing.module';
 import { RouterModule } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -18,6 +19,7 @@ import { RouterModule } from '@angular/router';
   imports: [
     CommonModule,
     RouterModule,
+    HttpClientModule,
     ClienteRoutingModule,
     ListagemModule,
     CadastroModule

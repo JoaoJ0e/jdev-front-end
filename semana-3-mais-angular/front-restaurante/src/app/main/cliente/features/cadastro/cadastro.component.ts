@@ -18,11 +18,11 @@ export class CadastroComponent implements OnInit{
     private clienteService: ClienteService,
     private formBuilder: FormBuilder
   ) {
-    this.activatedRoute.params.subscribe(valores => {
-      const cliente: Cliente | undefined = this.clienteService.findById(valores['id']); //TODO: Implementar findById (xgh 12)
-      this.buildForm()
-      this.editCliente(cliente);
-    })
+    // this.activatedRoute.params.subscribe(valores => {
+    //   const cliente: Cliente | undefined = this.clienteService.findById(valores['id']); //TODO: Implementar findById (xgh 12)
+    //   this.buildForm()
+    //   this.editCliente(cliente);
+    // })
 
   }
   ngOnInit(): void { // da um jeito de colocar o restauranteId aqui no lugar do 1
