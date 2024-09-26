@@ -47,6 +47,7 @@ export class CadastroComponent implements OnInit{
   addCliente() {
     if (this.form.valid) {
       this.clienteService.addCliente(this.form.getRawValue());
+      console.log('Cliente adicionado:', this.form.getRawValue())
       return;
     }
     alert('Erro: Dados inválidos no campo! Revise seus dados, por favor.')

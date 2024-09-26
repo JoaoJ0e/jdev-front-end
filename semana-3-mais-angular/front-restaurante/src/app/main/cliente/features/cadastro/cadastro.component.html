@@ -1,10 +1,10 @@
 <div>
-  <a routerLink="clientes/cadastro">Cadastro</a>
-  <a routerLink="clientes">Listagem</a>
+  <a routerLink="/clientes/cadastro">Cadastro</a>
+    <a routerLink="/clientes">Listagem</a>
 </div>
 
 
-<form class="cadastro-form" [formGroup]="form" onsubmit="addCliente()">
+<form class="cadastro-form" [formGroup]="form" (submit)="addCliente()">
   <div>
     <label for="restaurante-id">id restaurate</label>
     <input id="restaurante-id" type="text" formControlName="restauranteId" placeholder="TEMPORARIO">

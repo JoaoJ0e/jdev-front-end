@@ -5,9 +5,9 @@ import { ListagemComponent } from './features/listagem/listagem.component';
 import { CadastroComponent } from './features/cadastro/cadastro.component';
 
 const routes: Routes = [
-  { path: 'clientes', component: ListagemComponent },
-  { path: 'clientes/cadastro', component: CadastroComponent },
-  { path: '', component: ListagemComponent }
+  { path: '', component: ListagemComponent},
+  { path: 'cadastro', component: CadastroComponent},
+  { path: 'clientes', component: ListagemComponent }
 ];
 
 @NgModule({
