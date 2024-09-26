@@ -4,10 +4,10 @@
 </div>
 
 
-<form class="cadastro-form" [formGroup]="form" onsubmit="cadastraCliente()">
+<form class="cadastro-form" [formGroup]="form" onsubmit="addCliente()">
   <div>
     <label for="restaurante-id">id restaurate</label>
-    <input id="restaurante-id" type="text" formControlName="restaurante-id" placeholder="TEMPORARIO">
+    <input id="restaurante-id" type="text" formControlName="restauranteId" placeholder="TEMPORARIO">
   </div>
 
   <div>
@@ -27,7 +27,7 @@
 
   <div>
     <label for="data-nascimento">Data de Nascimento</label>
-    <input id="data-nascimento" formControlName="data-nascimento" type="date">
+    <input id="data-nascimento" formControlName="dataNascimento" type="date">
   </div>
 
   <div>

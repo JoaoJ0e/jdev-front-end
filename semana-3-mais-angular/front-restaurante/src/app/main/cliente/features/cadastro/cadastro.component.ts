@@ -26,10 +26,10 @@ export class CadastroComponent implements OnInit{
 
   }
   ngOnInit(): void { // da um jeito de colocar o restauranteId aqui no lugar do 1
-    this.clienteService.getClientes(1).subscribe((clientes) => {
-      console.log('clientes', clientes);
-      this.buildForm();
-    })
+    // this.clienteService.getClientes(1).subscribe((clientes) => {
+    //   console.log('clientes', clientes);
+    // })
+    this.buildForm();
   }
 
   buildForm() {

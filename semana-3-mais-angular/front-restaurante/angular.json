@@ -17,6 +17,7 @@
           "standalone": false
         }
       },
+      
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -102,10 +103,13 @@
             "scripts": []
           }
         }
+        
       }
-    }
+    }   
+
   },
   "cli": {
     "analytics": false
   }
+
 }
