@@ -3,7 +3,38 @@
   <a routerLink="/clientes">Listagem</a>
 </div>
 
-<p>listagem works!</p>
-
-
-
+<table border>
+  <tr>
+    <th>
+      id
+    </th>
+    <th>
+      Nome Completo
+    </th>
+    <th>
+      CPF
+    </th>
+    <th>
+      Data Nascimento
+    </th>
+    <th>
+      Sexo
+    </th>
+    <th>
+      Telefone
+    </th>
+    <th>
+      Ações
+    </th>
+  </tr>
+  <tr *ngFor="let cliente of clientes">
+    <td>{{ cliente.id }}</td>
+    <td>{{ cliente.nome }} {{ cliente.sobrenome }}</td>
+    <td>{{ cliente.cpf }}</td>
+    <td>{{ cliente.dataNascimento }}</td>
+    <td>{{ cliente.sexoEnum }}</td>
+    <td>{{ cliente.telefone }}</td>
+    <td><button (click)="editCliente(cliente)">Editar</button></td>
+    <td><button (click)="deleteCliente(cliente?.id)">Remover</button></td>
+  </tr>
+</table>
