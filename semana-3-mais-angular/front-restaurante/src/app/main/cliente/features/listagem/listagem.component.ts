@@ -26,8 +26,9 @@ export class ListagemComponent implements OnInit{
   }
 
   deleteCliente(clienteId: number) {
-    this.clienteService.deleteCliente(clienteId).subscribe();
-    this.updateList();
+    this.clienteService.deleteCliente(clienteId).subscribe(() =>
+      this.updateList());
+    
   }
 
   editCliente(cliente: Cliente) {

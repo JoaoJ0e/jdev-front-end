@@ -1,4 +1,12 @@
 <body>
-  <h1>Admin a la Carte</h1>
-  <input type="number" placeholder="ID Restaurante">
+  <h1>MenuGer - Alpha v0.3</h1>
+  <div>
+    <h2>v Insira seu ID</h2>
+    <input
+    type="number"
+    placeholder="ID Restaurante"
+    [(ngModel)]="selectedRestaurantId"
+    (ngModelChange)="onRestaurantIdChange($event)"
+  />
+  </div>
 </body>

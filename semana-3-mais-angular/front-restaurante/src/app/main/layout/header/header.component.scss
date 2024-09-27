@@ -1,4 +1,12 @@
 body {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+
+input {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  box-shadow: 5px 5px 1px rgba(0, 0, 0, 0.486);
 }

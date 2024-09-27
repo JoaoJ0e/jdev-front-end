@@ -1,4 +1,64 @@
+.link-wrapper {
+  display: flex;
+  justify-content: space-around;
+  width: 30%;
+  padding: 0.3rem;
+}
+
+.link-wrapper a {
+  color: white;
+  background-color: black;
+  padding: 0.5rem;
+  border-radius: 0.2rem;
+}
+
 .cadastro-form {
   display: flex;
   flex-direction: column;
+  gap: 1rem;
+}
+
+.item-wrapper {
+  display: flex;
+  gap: 1rem;
+}
+
+label {
+  background-color: black;
+  color: white;
+  padding: 0.3rem;
+  border-radius: 0.5rem;
+}
+
+input, select, button{
+  border: none;
+  padding:  0.3rem 1rem;
+  border-top-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+
+.invalid-text {
+  text-decoration: underline rgb(255, 255, 255);
+  color: rgb(133, 0, 0);
+  font-weight: 700;
+  font-size: large;
+}
+
+button {
+  font-weight: 600;
+  transition: background-color 500ms cubic-bezier(0.23, 1, 0.320, 1);
+  transition: transform 700ms cubic-bezier(0.23, 1, 0.320, 1);
+  transition: translate 1100ms cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+button:hover, button:active {
+  background-color: rgb(202, 255, 237);
+  transform: rotate(-5deg);
+  translate: 5px;
+}
+
+button:active {
+  transform: scale(1.4);
+  background-color: rgb(202, 255, 237);
+  transform: rotate(5deg);
 }

@@ -1,47 +1,68 @@
-<div>
+<div class="link-wrapper">
   <a routerLink="/clientes/cadastro">Cadastro</a>
-    <a routerLink="/clientes">Listagem</a>
+  <a routerLink="/clientes">Listagem</a>
 </div>
 
-
 <form class="cadastro-form" [formGroup]="form" (submit)="addCliente()">
-  <div>
-    <label for="restaurante-id">id restaurate</label>
-    <input id="restaurante-id" type="text" formControlName="restauranteId" placeholder="TEMPORARIO">
-  </div>
 
-  <div>
+  <input id="restauranteId" type="hidden" formControlName="restauranteId">
+
+  <!-- Nome -->
+  <div class="item-wrapper">
     <label for="nome">Nome</label>
     <input id="nome" type="text" formControlName="nome" placeholder="Nome">
+    <div class="invalid-text" *ngIf="form.get('nome')?.invalid">
+      <small >Nome é obrigatório.</small>
+    </div>
   </div>
 
-  <div>
+  <!-- Sobrenome -->
+  <div class="item-wrapper">
     <label for="sobrenome">Sobrenome</label>
     <input id="sobrenome" type="text" formControlName="sobrenome" placeholder="Sobrenome">
+    <div class="invalid-text" *ngIf="form.get('sobrenome')?.invalid">
+      <small >Sobrenome é obrigatório.</small>
+    </div>
   </div>
 
-  <div>
+  <!-- CPF -->
+  <div class="item-wrapper">
     <label for="cpf">CPF</label>
     <input id="cpf" type="text" formControlName="cpf" placeholder="CPF">
+    <div class="invalid-text"  *ngIf="form.get('cpf')?.invalid">
+      <small>CPF é obrigatório.</small>
+    </div>
   </div>
 
-  <div>
+  <!-- Data de Nascimento -->
+  <div class="item-wrapper">
     <label for="data-nascimento">Data de Nascimento</label>
     <input id="data-nascimento" formControlName="dataNascimento" type="date">
+    <div class="invalid-text" *ngIf="form.get('dataNascimento')?.invalid">
+      <small>Data de Nascimento é obrigatória.</small>
+    </div>
   </div>
 
-  <div>
+  <!-- Sexo -->
+  <div class="item-wrapper">
     <label for="sexoEnum">Sexo</label>
     <select id="sexoEnum" formControlName="sexoEnum" name="sexoEnum">
-      <option value="0">Masculino</option>
-      <option value="1">Feminino</option>
-      <option value="2">Prefiro não informar</option>
+      <option [value]="0">Masculino</option>
+      <option [value]="1">Feminino</option>
+      <option [value]="2">Prefiro não informar</option>
     </select>
+    <div class="invalid-text" *ngIf="form.get('sexoEnum')?.untouched">
+      <small>Seleção de sexo é obrigatória.</small>
+    </div>
   </div>
 
-  <div>
+  <!-- Telefone -->
+  <div class="item-wrapper">
     <label for="telefone">Telefone</label>
-    <input id="telefone" type="number" formControlName="telefone" placeholder="telefone">
+    <input id="telefone" type="text" formControlName="telefone" placeholder="telefone">
+    <div class="invalid-text" *ngIf="form.get('telefone')?.invalid">
+      <small>Telefone é obrigatório.</small>
+    </div>
   </div>
 
   <div>

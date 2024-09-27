@@ -1,0 +1,29 @@
+thead {
+    background-color: rgb(255, 255, 255);
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #dcdcdc;
+}
+  
+tbody tr:nth-child(even) {
+background-color: #bebebe;
+}
+
+td, th {
+    padding: 0.2rem;
+}
+
+.link-wrapper {
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+    padding: 0.3rem;
+}
+
+.link-wrapper a {
+    color: white;
+    background-color: black;
+    padding: 0.5rem;
+    border-radius: 0.2rem;
+}
