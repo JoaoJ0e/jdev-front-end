@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Cliente } from '../../models/Cliente';
 import { HttpClient } from '@angular/common/http';
 import { Observable, take } from 'rxjs';
+import { Page } from '../../models/Page';
 
 @Injectable({
   providedIn: 'root'
@@ -9,20 +10,25 @@ import { Observable, take } from 'rxjs';
 export class ClienteService {
   constructor(
     private http: HttpClient
-   ) { }
+  ) { }
 
-   getClientes(restauranteId: number): Observable<Cliente[]> {
-    return this.http.get<Cliente[]>(`localhost:8080/cliente/restaurante/${restauranteId}`)
-   }
+  getClientes(restauranteId: number) {
+    return this.http.get<Page<Cliente>>(`http://localhost:8080/clientes/restaurante/${restauranteId}`)
+  }
 
-   addCliente(cliente: Cliente) {
+  findById(id:number): Observable<Cliente> | undefined {
+    return this.http.get<Cliente>(`http://localhost:8080/clientes/${id}`);
+  }
 
-    console.log('post requested:')
-    return this.http.post('localhost:8080/cliente', cliente);
-   }
+  addCliente(cliente: Cliente): Observable<Cliente> {
+    return this.http.post<Cliente>('http://localhost:8080/clientes', cliente);
+  }
 
-  //  findById(id:number): Cliente | undefined {
-  //   return this.http.get(`localhost:8080/cliente/${id}`);
-  //  }
+  deleteCliente(clienteId: number) {
+    return this.http.delete(`http://localhost:8080/clientes/${clienteId}`);
+  }
 
+  editCliente(cliente: Cliente):Observable<Cliente> {
+    return this.http.put<Cliente>(`http://localhost:8080/clientes/${cliente.id}`, cliente);
+  }
 }

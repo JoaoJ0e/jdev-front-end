@@ -18,37 +18,38 @@ export class CadastroComponent implements OnInit{
     private clienteService: ClienteService,
     private formBuilder: FormBuilder
   ) {
-    // this.activatedRoute.params.subscribe(valores => {
-    //   const cliente: Cliente | undefined = this.clienteService.findById(valores['id']); //TODO: Implementar findById (xgh 12)
-    //   this.buildForm()
-    //   this.editCliente(cliente);
-    // })
+    this.activatedRoute.params.subscribe(valores => {
+      if (valores['id']) {
+        this.clienteService.findById(valores['id'])?.subscribe((cliente: Cliente) =>
+        this.editCliente(cliente));
+      }
+    })
 
   }
-  ngOnInit(): void { // da um jeito de colocar o restauranteId aqui no lugar do 1
-    // this.clienteService.getClientes(1).subscribe((clientes) => {
-    //   console.log('clientes', clientes);
-    // })
+  ngOnInit(): void {
     this.buildForm();
   }
 
   buildForm() {
     this.form = this.formBuilder.group({
-      restauranteId: [0, Validators.required],
+      restauranteId: [1, Validators.required],
       nome: [null, Validators.required],
       sobrenome: [null, Validators.required],
       cpf: [null, Validators.required],
       dataNascimento: [null, Validators.required],
-      sexo: [2, Validators.required],
+      sexoEnum: [2, Validators.required],
       telefone: [null, Validators.required]
     });
   }
 
   addCliente() {
     if (this.form.valid) {
-      this.clienteService.addCliente(this.form.getRawValue());
-      console.log('Cliente enviado:', this.form.getRawValue())
-      return;
+      const cliente: Cliente = this.form.getRawValue();
+      if (!cliente.id) {
+        this.clienteService.addCliente(this.form.getRawValue()).subscribe();
+        return;
+      }
+      this.clienteService.editCliente(cliente)
     }
     alert('Erro: Dados inválidos no campo! Revise seus dados, por favor.')
   }

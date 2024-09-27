@@ -34,7 +34,9 @@
     <td>{{ cliente.dataNascimento }}</td>
     <td>{{ cliente.sexoEnum }}</td>
     <td>{{ cliente.telefone }}</td>
-    <td><button (click)="editCliente(cliente)">Editar</button></td>
-    <td><button (click)="deleteCliente(cliente?.id)">Remover</button></td>
+    <td>
+      <button (click)="editCliente(cliente)">Editar</button>
+      <button (click)="deleteCliente(cliente.id!)">Remover</button>
+    </td>
   </tr>
 </table>

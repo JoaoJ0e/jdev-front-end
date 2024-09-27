@@ -7,6 +7,7 @@ import { CadastroComponent } from './features/cadastro/cadastro.component';
 const routes: Routes = [
   { path: '', component: ListagemComponent},
   { path: 'cadastro', component: CadastroComponent},
+  { path: 'cadastro/:id', component: CadastroComponent},
   { path: 'clientes', component: ListagemComponent }
 ];
 
